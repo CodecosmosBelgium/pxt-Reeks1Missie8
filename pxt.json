@@ -7,9 +7,9 @@
         "builder": "*"
     },
     "files": [
-        "README.md",
         "main.blocks",
-        "main.ts"
+        "main.ts",
+        "t_level1.md"
     ],
     "testFiles": [
         "test.ts"
@@ -22,5 +22,5 @@
     "supportedTargets": [
         "minecraft"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
