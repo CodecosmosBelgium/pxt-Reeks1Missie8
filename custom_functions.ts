@@ -5,14 +5,15 @@ namespace AgentExtension {
         let x = agent.getPosition().getValue(Axis.X)
         let y = agent.getPosition().getValue(Axis.Y) - 1
         let z = agent.getPosition().getValue(Axis.Z)
-        if (!blocks.testForBlock(AIR, world(x, y, z))) {
-            for(let i = 0;i++;i<amount) {
+        for (let i = 0; i++; i < amount) {
+            if (!blocks.testForBlock(AIR, world(x, y, z))) {
                 agent.move(dir, 1)
+            } else {
+                player.execute("function levels/fall")
+                agent.move(SixDirection.Down, 5)
             }
-        } else {
-            player.execute("function levels/fall")
-            agent.move(SixDirection.Down, 5)
         }
+
     }
 }
 
