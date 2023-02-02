@@ -20,7 +20,7 @@ namespace AgentExtension {
 namespace CodeCosmos {
     //% block="zetKlaar"
     export function start() {
-        agent.teleport(world(153,112,327), CompassDirection.West)
+        agent.teleport(world(153,112,327), CompassDirection.South)
     }
     //% block="controleerLevel"
     export function checkLevel() {
