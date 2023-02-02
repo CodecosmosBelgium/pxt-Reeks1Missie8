@@ -10,6 +10,7 @@ namespace AgentExtension {
                 agent.move(dir, 1)
             }
         } else {
+            player.execute("function levels/fall")
             agent.move(SixDirection.Down, 5)
         }
     }
