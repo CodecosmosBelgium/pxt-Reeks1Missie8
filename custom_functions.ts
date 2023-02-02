@@ -6,7 +6,9 @@ namespace AgentExtension {
         let y = agent.getPosition().getValue(Axis.Y) - 1
         let z = agent.getPosition().getValue(Axis.Z)
         if (!blocks.testForBlock(AIR, world(x, y, z))) {
-            agent.move(dir, amount)
+            for(let i = 0;i++;i<amount) {
+                agent.move(dir, 1)
+            }
         } else {
             agent.move(SixDirection.Down, 5)
         }
