@@ -3,5 +3,5 @@
 ```template
 
 ```
-## Velden beplanten
+## Code debuggen
 Volg de instructies op het leerplatform om de opdracht op te lossen.
