@@ -9,8 +9,8 @@ namespace AgentExtension {
             if (!blocks.testForBlock(AIR, world(x, y, z))) {
                 agent.move(dir, 1)
             } else {
-                player.execute("function levels/fall")
                 agent.move(SixDirection.Down, 5)
+                player.execute("function levels/fall")
             }
         }
     }
