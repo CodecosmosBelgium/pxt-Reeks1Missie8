@@ -10,7 +10,8 @@
         "main.blocks",
         "main.ts",
         "t_level1.md",
-        "custom_functions.ts"
+        "custom_functions.ts",
+        "t_level2.md"
     ],
     "testFiles": [
         "test.ts"

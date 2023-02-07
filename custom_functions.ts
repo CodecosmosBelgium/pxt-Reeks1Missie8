@@ -18,6 +18,10 @@ namespace AgentExtension {
             }
         }
     }
+    //% block="agent beweeg $dir met 1"
+    export function moveOne(dir: FourDirection) {
+       move(dir,1)
+    }
 }
 
 //% color=190 weight=100 block="CodeCosmos"
