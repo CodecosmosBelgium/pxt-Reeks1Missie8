@@ -24,12 +24,31 @@ namespace AgentExtension {
     }
 }
 
+enum Level {
+    //% block="level 1"
+    level1,
+    //% block="level 2"
+    level2,
+    //% block="level 3"
+    level3,
+}
+
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
-    //% block="zetKlaar"
+    //% block="zetKlaar $level"
     //% block.loc.nl="zetKlaar NL"
-    export function start() {
-        agent.teleport(world(153,112,327), CompassDirection.South)
+    export function start(level:Level) {
+        if(level===0) {
+            agent.teleport(world(153, 112, 327), CompassDirection.South)
+            return
+        }
+
+        if(level===1) {
+            agent.teleport(world(153, 112, 323), CompassDirection.South)
+            return
+        }
+
+        // player.say(":(")
     }
     //% block="controleerLevel"
     export function checkLevel() {
