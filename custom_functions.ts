@@ -50,13 +50,20 @@ namespace CodeCosmos {
 
         // player.say(":(")
     }
-    //% block="controleerLevel"
-    export function checkLevel() {
-        if(agent.getPosition().toString()===world(161,112,347).toString()) {
-            player.execute("function levels/done")
-        } else {
-            player.execute("function levels/wrong")
+    //% block="controleer $level"
+    export function checkLevel(level:Level) {
+        if (level === 0 && agent.getPosition().toString() === world(161, 112, 347).toString()) {
+            player.execute("function levels/level1/levelup")
+            return
         }
+
+        if (level === 1 && agent.getPosition().toString() === world(161, 112, 347).toString()) {
+            player.execute("function levels/level2/levelup")
+            return
+        }
+
+        player.execute("function levels/wrong")
+    
     }
 
     //% block="is er $block $dir van de agent"
