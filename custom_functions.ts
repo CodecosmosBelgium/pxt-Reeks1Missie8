@@ -1,6 +1,10 @@
 //% color="#D83B01" weight=100 block="AgentExtension"
 namespace AgentExtension {
-    //% block="agent beweeg $dir met $amount" block.loc.nl="jowkens $dir $amount"
+    //% block="positie onder agent"
+    export function positionBelowAgent() {
+        return world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
+    }
+    //% block="agent beweeg $dir met $amount"
     export function move(dir:FourDirection, amount:number) {
         for (let i = 0; i < amount; i++) {
             let x = agent.getPosition().getValue(Axis.X)
@@ -32,7 +36,7 @@ namespace CodeCosmos {
         }
     }
 
-    //% block="is er een $block $dir van de agent"
+    //% block="is er $block $dir van de agent"
     export function isBlock(block:Block,dir:FourDirection) {
         let x = agent.getPosition().getValue(Axis.X)
         let y = agent.getPosition().getValue(Axis.Y) - 1
