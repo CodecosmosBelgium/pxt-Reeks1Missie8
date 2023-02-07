@@ -31,4 +31,19 @@ namespace CodeCosmos {
             player.execute("function levels/wrong")
         }
     }
+
+    //% block="is er een $block $dir van de agent"
+    export function isBlock(block:Block,dir:FourDirection) {
+        let x = agent.getPosition().getValue(Axis.X)
+        let y = agent.getPosition().getValue(Axis.Y) - 1
+        let z = agent.getPosition().getValue(Axis.Z)
+
+        switch (dir) {
+            case FourDirection.Forward: return blocks.testForBlock(block, world(x, y, z + 1))
+            case FourDirection.Back: return blocks.testForBlock(block, world(x, y, z - 1))
+            case FourDirection.Left: return blocks.testForBlock(block, world(x + 1, y, z))
+            case FourDirection.Right: return blocks.testForBlock(block, world(x - 1, y, z))
+            default: return false;
+        }
+    }
 }
