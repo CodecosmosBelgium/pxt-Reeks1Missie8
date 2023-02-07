@@ -1,6 +1,6 @@
 //% color="#D83B01" weight=100 block="AgentExtension"
 namespace AgentExtension {
-    //% block="agent beweeg $dir met $amount"
+    //% block="agent beweeg $dir met $amount" block.loc.nl="jowkens $dir $amount"
     export function move(dir:FourDirection, amount:number) {
         for (let i = 0; i < amount; i++) {
             let x = agent.getPosition().getValue(Axis.X)
@@ -19,6 +19,7 @@ namespace AgentExtension {
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
     //% block="zetKlaar"
+    //% block.loc.nl="zetKlaar NL"
     export function start() {
         agent.teleport(world(153,112,327), CompassDirection.South)
     }
@@ -30,5 +31,4 @@ namespace CodeCosmos {
             player.execute("function levels/wrong")
         }
     }
-
 }
