@@ -1,3 +1,5 @@
+### @hideIteration true
+### @flyoutOnly true
 # Missie 8 (v1.2)
 
 ```template
