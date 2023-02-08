@@ -10,7 +10,7 @@ namespace AgentExtension {
             let x = agent.getPosition().getValue(Axis.X)
             let y = agent.getPosition().getValue(Axis.Y) - 1
             let z = agent.getPosition().getValue(Axis.Z)
-            if (!blocks.testForBlock(AIR, world(x, y, z))) {
+            if (!blocks.testForBlock(AIR, world(x, y, z)) && !blocks.testForBlock(SANDSTONE, world(x, y, z))) {
                 agent.move(dir, 1)
             } else {
                 agent.move(SixDirection.Down, 5)
@@ -40,11 +40,16 @@ namespace CodeCosmos {
     export function start(level:Level) {
         if(level===0) {
             agent.teleport(world(153, 112, 327), CompassDirection.South)
+            blocks.fill(SANDSTONE,world(159,111,331), world(158,111,331))
             return
         }
 
         if(level===1) {
             agent.teleport(world(153, 112, 323), CompassDirection.South)
+            blocks.place(SANDSTONE, world(161, 111, 342))
+            blocks.place(SANDSTONE, world(155, 111, 344))
+            blocks.place(SANDSTONE, world(157, 111, 344))
+            blocks.place(SANDSTONE, world(159, 111, 344))
             return
         }
 
@@ -52,7 +57,7 @@ namespace CodeCosmos {
     }
     //% block="controleer $level"
     export function checkLevel(level:Level) {
-        if (level === 0 && agent.getPosition().toString() === world(161, 112, 347).toString()) {
+        if (level === 0 && agent.getPosition().toString() === world(153, 112, 333).toString()) {
             player.execute("function levels/level1/levelup")
             return
         }
