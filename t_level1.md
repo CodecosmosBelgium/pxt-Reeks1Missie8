@@ -24,20 +24,20 @@ CodeCosmos.start(Level.level1)
     AgentExtension.move(FourDirection.Right, 3)
     AgentExtension.move(FourDirection.Back, 2)
     if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Right)) {
-        agent.move(RIGHT, 1)
+        AgentExtension.move(RIGHT, 1)
         blocks.place(DIORITE, AgentExtension.positionBelowAgent())
     } else {
     }
     if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Right)) {
-        agent.move(RIGHT, 1)
+        AgentExtension.move(RIGHT, 1)
         blocks.place(DIORITE, AgentExtension.positionBelowAgent())
     }
-    agent.move(RIGHT, 1)
-    agent.move(FORWARD, 2)
-    agent.move(RIGHT, 2)
-    agent.move(BACK, 1)
-    agent.move(RIGHT, 2)
-    agent.move(FORWARD, 1)
+    AgentExtension.move(RIGHT, 1)
+    AgentExtension.move(FORWARD, 2)
+    AgentExtension.move(RIGHT, 2)
+    AgentExtension.move(BACK, 1)
+    AgentExtension.move(RIGHT, 2)
+    AgentExtension.move(FORWARD, 1)
     CodeCosmos.checkLevel(Level.level1)
 })
 ```
@@ -63,21 +63,21 @@ player.onChat("level1", function() {
     AgentExtension.move(FourDirection.Forward, 3)
     AgentExtension.move(FourDirection.Back, 1)
     if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Left)) {
-        agent.move(LEFT, 1)
+        AgentExtension.move(LEFT, 1)
         blocks.place(DIORITE, AgentExtension.positionBelowAgent())
     } else {
-        agent.move(FORWARD, 1)
+        AgentExtension.move(FORWARD, 1)
     }
     if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Right)) {
-        agent.move(RIGHT, 2)
+        AgentExtension.move(RIGHT, 2)
         blocks.place(DIORITE, AgentExtension.positionBelowAgent())
     }
-    agent.move(LEFT, 1)
-    agent.move(FORWARD, 3)
-    agent.move(LEFT, 2)
-    agent.move(BACK, 2)
-    agent.move(RIGHT, 2)
-    agent.move(BACK, 1)
+    AgentExtension.move(LEFT, 1)
+    AgentExtension.move(FORWARD, 3)
+    AgentExtension.move(LEFT, 2)
+    AgentExtension.move(BACK, 2)
+    AgentExtension.move(RIGHT, 2)
+    AgentExtension.move(BACK, 1)
     CodeCosmos.checkLevel(Level.level2)
 })
 ```
