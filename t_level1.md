@@ -27,7 +27,6 @@ CodeCosmos.start(Level.level1)
         agent.move(RIGHT, 1)
         blocks.place(DIORITE, AgentExtension.positionBelowAgent())
     } else {
-        agent.move(BACK, 1)
     }
     if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Right)) {
         agent.move(RIGHT, 1)
