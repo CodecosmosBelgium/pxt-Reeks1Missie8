@@ -45,7 +45,7 @@ namespace CodeCosmos {
         }
 
         if(level===1) {
-            agent.teleport(world(153, 112, 323), CompassDirection.South)
+            agent.teleport(world(153, 112, 335), CompassDirection.South)
             blocks.place(SANDSTONE, world(161, 111, 342))
             blocks.place(SANDSTONE, world(155, 111, 344))
             blocks.place(SANDSTONE, world(157, 111, 344))
