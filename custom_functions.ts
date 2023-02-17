@@ -73,7 +73,7 @@ namespace CodeCosmos {
 
     //% block="is er $block=minecraftBlock $dir van de agent"
     //% block.shadow=minecraftBlock
-    export function isBlock(block:Block,dir:FourDirection) {
+    export function isBlock(block:number,dir:FourDirection) {
         let x = agent.getPosition().getValue(Axis.X)
         let y = agent.getPosition().getValue(Axis.Y) - 1
         let z = agent.getPosition().getValue(Axis.Z)
