@@ -31,7 +31,7 @@ player.onChat("level1", function() {
         AgentExtension.move(FourDirection.Forward, 1)
     }
     if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Right)) {
-        AgentExtension.move(FourDirection.RIGHT, 2)
+        AgentExtension.move(FourDirection.Right, 2)
         blocks.place(DIORITE, AgentExtension.positionBelowAgent())
     }
     AgentExtension.move(FourDirection.Left, 1)
