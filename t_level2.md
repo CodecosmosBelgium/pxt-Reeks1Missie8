@@ -4,47 +4,47 @@
 
 ```template
 player.onChat("jump", function() {
-    CodeCosmos.start(Level.level3)
-    AgentExtension.moveOne(FourDirection.Forward)
-    AgentExtension.moveOne(FourDirection.Left)
-    AgentExtension.moveOne(FourDirection.Right)
-    AgentExtension.moveOne(FourDirection.Left)
-    AgentExtension.moveOne(FourDirection.Back)
-    while (CodeCosmos.isBlock(GRASS, FourDirection.Left)) {
-        AgentExtension.moveOne(FourDirection.Right)
+    CodeCosmosEN.start(Level.level3)
+    AgentExtensionEN.moveOne(FourDirection.Forward)
+    AgentExtensionEN.moveOne(FourDirection.Left)
+    AgentExtensionEN.moveOne(FourDirection.Right)
+    AgentExtensionEN.moveOne(FourDirection.Left)
+    AgentExtensionEN.moveOne(FourDirection.Back)
+    while (CodeCosmosEN.isBlock(GRASS, FourDirection.Left)) {
+        AgentExtensionEN.moveOne(FourDirection.Right)
     }
     for (let index = 0; index < 6; index++) {
-        AgentExtension.moveOne(FourDirection.Forward)
+        AgentExtensionEN.moveOne(FourDirection.Forward)
     }
-    AgentExtension.moveOne(FourDirection.Left)
-    if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Forward)) {
-        AgentExtension.moveOne(FourDirection.Left)
-        blocks.place(SAND, AgentExtension.positionBelowAgent())
+    AgentExtensionEN.moveOne(FourDirection.Left)
+    if (CodeCosmosEN.isBlock(SANDSTONE, FourDirection.Forward)) {
+        AgentExtensionEN.moveOne(FourDirection.Left)
+        blocks.place(SAND, AgentExtensionEN.positionBelowAgent())
     }
-    AgentExtension.moveOne(FourDirection.Left)
+    AgentExtensionEN.moveOne(FourDirection.Left)
     for (let index = 0; index < 5; index++) {
-        AgentExtension.moveOne(FourDirection.Right)
+        AgentExtensionEN.moveOne(FourDirection.Right)
     }
-    AgentExtension.moveOne(FourDirection.Right)
+    AgentExtensionEN.moveOne(FourDirection.Right)
     for (let index = 0; index < 1; index++) {
-        AgentExtension.moveOne(FourDirection.Forward)
+        AgentExtensionEN.moveOne(FourDirection.Forward)
     }
-    AgentExtension.moveOne(FourDirection.Left)
+    AgentExtensionEN.moveOne(FourDirection.Left)
     for (let index = 0; index < 7; index++) {
-        AgentExtension.moveOne(FourDirection.Left)
-        AgentExtension.moveOne(FourDirection.Back)
+        AgentExtensionEN.moveOne(FourDirection.Left)
+        AgentExtensionEN.moveOne(FourDirection.Back)
     }
-    AgentExtension.moveOne(FourDirection.Back)
-    AgentExtension.moveOne(FourDirection.Right)
+    AgentExtensionEN.moveOne(FourDirection.Back)
+    AgentExtensionEN.moveOne(FourDirection.Right)
     for (let index = 0; index < 9; index++) {
-        if (CodeCosmos.isBlock(SAND, FourDirection.Right)) {
-            AgentExtension.moveOne(FourDirection.Left)
-            AgentExtension.moveOne(FourDirection.Left)
-            blocks.place(DIORITE, AgentExtension.positionBelowAgent())
+        if (CodeCosmosEN.isBlock(SAND, FourDirection.Right)) {
+            AgentExtensionEN.moveOne(FourDirection.Left)
+            AgentExtensionEN.moveOne(FourDirection.Left)
+            blocks.place(DIORITE, AgentExtensionEN.positionBelowAgent())
         }
     }
-    CodeCosmos.checkLevel(Level.level3)
+    CodeCosmosEN.checkLevel(Level.level3)
 })
 ```
 ## Code debuggen
-Volg de instructies op het leerplatform om de opdracht op te lossen.
+Use the learning platform to solve the exercise.

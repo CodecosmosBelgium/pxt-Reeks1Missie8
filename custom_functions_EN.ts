@@ -1,11 +1,11 @@
 //% color="#D83B01" weight=100 block="AgentExtension"
-namespace AgentExtension {
-    //% block="positie onder agent"
+namespace AgentExtensionEN {
+    //% block="position below agent"
     export function positionBelowAgent() {
         return world(agent.getPosition().getValue(Axis.X), agent.getPosition().getValue(Axis.Y) - 1, agent.getPosition().getValue(Axis.Z))
     }
-    //% block="agent beweeg $dir met $amount"
-    export function move(dir:FourDirection, amount:number) {
+    //% block="agent move $dir with $amount"
+    export function move(dir: FourDirection, amount: number) {
         for (let i = 0; i < amount; i++) {
             let x = agent.getPosition().getValue(Axis.X)
             let y = agent.getPosition().getValue(Axis.Y) - 1
@@ -18,13 +18,13 @@ namespace AgentExtension {
             }
         }
     }
-    //% block="agent beweeg $dir met 1"
+    //% block="agent move $dir with 1"
     export function moveOne(dir: FourDirection) {
-       move(dir,1)
+        move(dir, 1)
     }
 }
 
-enum Level {
+enum LevelEN {
     //% block="level 1"
     level1,
     //% block="level 2"
@@ -34,16 +34,16 @@ enum Level {
 }
 
 //% color=190 weight=100 block="CodeCosmos"
-namespace CodeCosmos {
-    //% block="zetKlaar $level"
-    export function start(level:Level) {
-        if(level===0) {
+namespace CodeCosmosEN {
+    //% block="startingPosition $level"
+    export function start(level: LevelEN) {
+        if (level === 0) {
             agent.teleport(world(153, 112, 327), CompassDirection.South)
-            blocks.fill(SANDSTONE,world(159,111,331), world(158,111,331))
+            blocks.fill(SANDSTONE, world(159, 111, 331), world(158, 111, 331))
             return
         }
 
-        if(level===1) {
+        if (level === 1) {
             agent.teleport(world(153, 112, 335), CompassDirection.South)
             blocks.place(SANDSTONE, world(161, 111, 342))
             blocks.place(SANDSTONE, world(155, 111, 344))
@@ -55,7 +55,7 @@ namespace CodeCosmos {
         // player.say(":(")
     }
     //% block="controleer $level"
-    export function checkLevel(level:Level) {
+    export function checkLevel(level: LevelEN) {
         if (level === 0 && agent.getPosition().toString() === world(153, 112, 333).toString()) {
             player.execute("function levels/level1/levelup")
             return
@@ -67,12 +67,12 @@ namespace CodeCosmos {
         }
 
         player.execute("function levels/wrong")
-    
+
     }
 
-    //% block="is er $block=minecraftBlock $dir van de agent"
+    //% block="is there a $block=minecraftBlock $dir of agent"
     //% block.shadow=minecraftBlock
-    export function isBlock(block:number,dir:FourDirection) {
+    export function isBlock(block: number, dir: FourDirection) {
         let x = agent.getPosition().getValue(Axis.X)
         let y = agent.getPosition().getValue(Axis.Y) - 1
         let z = agent.getPosition().getValue(Axis.Z)
