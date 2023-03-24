@@ -4,7 +4,7 @@
 
 ```template
 player.onChat("jump", function() {
-    CodeCosmosEN.start(Level.level3)
+    CodeCosmosEN.start(LevelEN.level3)
     AgentExtensionEN.moveOne(FourDirection.Forward)
     AgentExtensionEN.moveOne(FourDirection.Left)
     AgentExtensionEN.moveOne(FourDirection.Right)
@@ -43,7 +43,7 @@ player.onChat("jump", function() {
             blocks.place(DIORITE, AgentExtensionEN.positionBelowAgent())
         }
     }
-    CodeCosmosEN.checkLevel(Level.level3)
+    CodeCosmosEN.checkLevel(LevelEN.level3)
 })
 ```
 ## Code debuggen

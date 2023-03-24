@@ -5,7 +5,7 @@
 
 ```template
 player.onChat("level1", function() {
-    CodeCosmosEN.start(Level.level1)
+    CodeCosmosEN.start(LevelEN.level1)
     AgentExtensionEN.move(FourDirection.Forward, 3)
     AgentExtensionEN.move(FourDirection.Left, 2)
     AgentExtensionEN.move(FourDirection.Back, 2)
@@ -40,7 +40,7 @@ player.onChat("level1", function() {
     AgentExtensionEN.move(FourDirection.Back, 2)
     AgentExtensionEN.move(FourDirection.Right, 2)
     AgentExtensionEN.move(FourDirection.Back, 1)
-    CodeCosmosEN.checkLevel(Level.level2)
+    CodeCosmosEN.checkLevel(LevelEN.level2)
 })
 ```
 ## Code debuggen
