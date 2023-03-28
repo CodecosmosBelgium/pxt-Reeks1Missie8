@@ -17,6 +17,7 @@ player.onChat("jump", function() {
         AgentExtension.moveOne(FourDirection.Forward)
     }
     AgentExtension.moveOne(FourDirection.Left)
+    AgentExtension.moveOne(FourDirection.Left)
     if (CodeCosmos.isBlock(SANDSTONE, FourDirection.Forward)) {
         AgentExtension.moveOne(FourDirection.Left)
         blocks.place(SAND, AgentExtension.positionBelowAgent())
@@ -29,6 +30,7 @@ player.onChat("jump", function() {
     for (let index = 0; index < 1; index++) {
         AgentExtension.moveOne(FourDirection.Forward)
     }
+    AgentExtension.moveOne(FourDirection.Left)
     AgentExtension.moveOne(FourDirection.Left)
     for (let index = 0; index < 7; index++) {
         AgentExtension.moveOne(FourDirection.Left)
