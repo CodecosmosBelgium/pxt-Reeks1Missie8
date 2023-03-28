@@ -54,7 +54,7 @@ namespace CodeCosmosEN {
 
         // player.say(":(")
     }
-    //% block="controleer $level"
+    //% block="check $level"
     export function checkLevel(level: LevelEN) {
         if (level === 0 && agent.getPosition().toString() === world(153, 112, 333).toString()) {
             player.execute("function levels/level1/levelup")
